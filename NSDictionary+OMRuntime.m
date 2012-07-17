@@ -13,7 +13,11 @@
 {
     return [self valueForKey:key];
 }
+#endif
+@end
 
+@implementation NSMutableDictionary (OMRuntime)
+#if __IPHONE_OS_VERSION_MIN_REQUIRED <= __IPHONE_5_1
 - (void)setObject:(id)object forKeyedSubScript:(id)key
 {
     [self setValue:object forKey:key];

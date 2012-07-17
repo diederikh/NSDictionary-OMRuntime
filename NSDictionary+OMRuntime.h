@@ -10,6 +10,11 @@
 @interface NSDictionary (OMRuntime)
 #if __IPHONE_OS_VERSION_MIN_REQUIRED <= __IPHONE_5_1
 - (id)objectForKeyedSubscript:(id)key;
+#endif
+@end
+
+@interface NSMutableDictionary (OMRuntime)
+#if __IPHONE_OS_VERSION_MIN_REQUIRED <= __IPHONE_5_1
 - (void)setObject:(id)object forKeyedSubScript:(id)key;
 #endif
 @end
